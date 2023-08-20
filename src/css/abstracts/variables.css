@@ -1,6 +1,6 @@
 :root {
-  --f-family: system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', roboto,
-    oxygen, ubuntu, cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-primary: 'Exo', sans-serif;
+  --font-secondary: 'Nunito Sans', sans-serif;
   --h1: 2rem;
   --h2: 1.7411rem;
   --h3: 1.5157rem;

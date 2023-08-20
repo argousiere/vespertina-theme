@@ -7,5 +7,10 @@ html {
     1.375rem
   );
   line-height: 1.6;
-  font-family: var(--f-family);
+  font-family: var(--font-secondary);
+}
+
+body {
+  color: var(--body-text-color);
+}
 }
