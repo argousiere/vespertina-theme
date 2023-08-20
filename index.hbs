@@ -16,8 +16,12 @@
             {{/if}}
             <div>
                 <h2><a href="{{url}}">{{title}}</a></h2>
-                <p>{{authors}} &bull; {{date published_at timeago="true"}} &bull; {{tags}}</p>
-                <p>{{excerpt}}</p>
+                <div class="post__information">
+                    <span class="post__metadata post__author">{{authors}}</span>
+                    <span class="post__metadata post__date-published">{{date published_at timeago="true"}}</span>
+                    <span class="post__metadata post__tags">{{tags}}</span>
+                </div>
+                <p class="post__body">{{excerpt}}</p>
             </div>
         </article>
 

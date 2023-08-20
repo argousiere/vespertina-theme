@@ -10,6 +10,19 @@
   --small: 0.8706rem;
 
   --gap: 1rem;
+
+  --body-bg-color: rgb(11 23 34);
+  --body-text-color: #ffffff;
+
+  --grid-line-color: #a2b6c0;
+  --grid-line-color-secondary: #7796a3;
+  --grid-line-color-tertiary: #bbdfc6;
+  --grid-line-width: 1px;
+  --grid-dot-color: #305c59;
+  --grid-dot-size: 2px;
+  --grid-size: 48px;
+
+  --border-color: rgb(37 87 126);
 }
 
 @media (min-width: 576px) {
