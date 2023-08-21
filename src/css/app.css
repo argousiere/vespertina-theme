@@ -9,6 +9,9 @@
 @import './base/typography.css';
 @import './base/grid.css';
 
+/* Components */
+@import './components/timeline.css';
+
 /* Layout */
 @import './layout/navigation.css';
 @import './layout/header.css';

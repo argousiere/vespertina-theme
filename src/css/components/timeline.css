@@ -1,0 +1,54 @@
+.timeline {
+    position: relative;
+}
+
+.timeline > * {
+    margin-left: calc(var(--grid-size) * 3);
+}
+
+.timeline::before,
+.timeline::after {
+    content: '';
+    position: absolute;
+    left: var(--grid-size);
+    top: 0;
+    height: 100%;
+}
+
+.timeline::before {
+    background-image:
+        linear-gradient(to right, #43aeea 0 1px, transparent 0),
+        linear-gradient(to bottom,
+            #43aeea 0 1px,
+            transparent 0),
+        linear-gradient(to bottom,
+            #156074 0 1px,
+            transparent 0);
+    background-size: 
+        16px 100%,
+        16px 48px,
+        8px 8px;
+    width: 16px;
+    background-repeat: repeat-y;
+}
+
+.timeline > article {
+    position: relative;
+}
+
+.timeline > article::before {
+    --timeline-point-size: 5px;
+    --timeline-connector-width: 1px;
+    --timeline-link-height: calc(var(--timeline-point-size) * 2);
+    content: '';
+    position: absolute;
+    width: calc((var(--grid-size) * 2) + var(--timeline-point-size));
+    left: calc((var(--grid-size) * -2) - var(--timeline-point-size));
+    top: 50%;
+    height: var(--timeline-link-height);
+    background-image: 
+        radial-gradient(#43aeea 0 var(--timeline-point-size), transparent 0),
+        linear-gradient(to bottom, transparent 0 var(--timeline-point-size), #43aeea var(--timeline-point-size), transparent calc(var(--timeline-point-size) + var(--timeline-connector-width)));
+    background-size: var(--timeline-link-height) var(--timeline-link-height), 100% var(--timeline-link-height);
+    background-repeat: no-repeat, repeat-y;
+}
