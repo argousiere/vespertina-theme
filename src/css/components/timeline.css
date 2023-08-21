@@ -1,0 +1,34 @@
+/* You would enter button styles here */
+
+.timeline {
+    position: relative;
+}
+
+.timeline::before,
+.timeline::after {
+    content: '';
+    position: absolute;
+    left: var(--grid-size);
+    top: 0;
+    height: 100%;
+}
+
+.timeline::before {
+    background-image:
+        repeating-linear-gradient(to bottom,
+            #156074 0 1px,
+            transparent 1px 4px);
+    width: 8px;
+}
+
+.timeline::after {
+    width: 12px;
+    background-image: 
+        linear-gradient(to right, #5c757a 0 1px, transparent 2px 100%),
+        repeating-linear-gradient(to bottom,
+            #43aeea 0 1px,
+            transparent 1px 32px);
+    background-size: 
+        16px 100%,
+        8px 100%;
+}
