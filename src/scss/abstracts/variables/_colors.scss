@@ -1,0 +1,28 @@
+$body-bg-color: rgb(11, 23, 34);
+$body-text-color: #ffffff;
+
+:root {
+    --grid-line-color: #a2b6c0;
+  --grid-line-color-secondary: #7796a3;
+  --grid-line-color-tertiary: #bbdfc6;
+  --grid-line-width: 1px;
+  --grid-dot-color: #305c59;
+  --grid-dot-size: 2px;
+  --grid-size: 3rem;
+
+  --color-light: #c3f8ff8f;
+  --border-color: rgb(37 87 126);
+
+  --card-border-color: #1e7290;
+  --card-bg-color: linear-gradient(to bottom, rgba(0, 240, 255 / 4%), rgba(5, 35, 52, 20%));
+
+  --timeline-main-color: #43aeea;
+  --timeline-tick-width: 1px;
+  --timeline-tick-area: 16px;
+  --timeline-tick-primary-offset: calc(var(--grid-size) * 2);
+  --timeline-tick-secondary-offset: calc(var(--grid-size));
+  --timeline-tick-tertiary-offset: calc(var(--grid-size) / 4);
+  --timeline-tick-primary-color: #43aeea;
+  --timeline-tick-secondary-color: #24809a;
+  --timeline-tick-tertiary-color: #0f4554;
+}

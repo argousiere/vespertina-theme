@@ -1,13 +1,21 @@
 nav,
 footer {
-  padding: 1rem 0;
+  padding: 0;
 }
+
+nav ul {
+  justify-content: flex-end;
+  padding: 0 var(--grid-size);
+}
+
 nav ul,
 footer ul {
   display: flex;
+  align-items: center;
   gap: 1rem;
   list-style-type: none;
   font-size: var(--small);
+  height: calc(var(--grid-size) * 2);
 }
 
 nav a {

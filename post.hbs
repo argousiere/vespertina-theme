@@ -9,6 +9,32 @@
 
 <article class="{{post_class}}">
     {{content}}
+    <span class="post__metadata post__date-published">{{date published_at timeago="true"}}</span>
+
+            <h2 class="post__title"><a href="{{url}}">{{title}}</a></h2>
+
+            <div class="post__body">
+                <div class="post__content">
+                    <p class="post__excerpt">{{excerpt}}</p>
+
+                    {{#if feature_image}}
+                        <div class="post__cover">
+                            <img src="{{img_url feature_image size="m"}}" alt=""> 
+                        </div>
+                    {{/if}}
+                </div>
+
+                <div class="post__tags">
+                    <h6 class="post__tags-title">Filed Under</h6>
+                    <div class="post__tags-list">
+                        {{#foreach tags}}
+                            <a href="{{url}}" title="{{name}}" class="post__tag post__tag--{{slug}}">
+                                {{name}}
+                            </a>
+                        {{/foreach}}
+                    </div>
+                </div>
+            </div>
 </article>
 
 {{/post}}

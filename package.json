@@ -14,7 +14,8 @@
     "build": "NODE_ENV=production rollup -c",
     "zip": "npm run build && node utils/zip",
     "check": "gscan .",
-    "css": "npx stylelint 'src/css/**/*.css' --fix"
+    "css": "npx stylelint 'src/css/**/*.css' --fix",
+    "sass": "sass --source-map -w src/scss/main.scss assets/built/main.css"
   },
   "keywords": [
     "ghost-theme"
@@ -73,5 +74,9 @@
     "rollup-plugin-terser": "7.0.2",
     "stylelint": "14.15.0",
     "stylelint-order": "5.0.0"
+  },
+  "dependencies": {
+    "modern-normalize": "^2.0.0",
+    "sass": "^1.66.1"
   }
 }

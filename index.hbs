@@ -4,28 +4,40 @@
     <header>
         <h1>{{@site.title}}</h1>
         <p>{{@site.description}}</p>
+
+        <div class="svg-frame">
+            <img class="svg-image"  
+            src="/assets/images/hud.svg" alt="HUD" />
+        </div>
     </header>
 
-    {{#foreach posts}}
+    <section class="post-box">
+        <h2>Latest Posts</h2>
 
-        <article>
-            {{#if feature_image}}
-                <div>
-                    <img src="{{img_url feature_image size="m"}}" alt=""> 
-                </div>
-            {{/if}}
-            <div>
-                <h2><a href="{{url}}">{{title}}</a></h2>
-                <div class="post__information">
-                    <span class="post__metadata post__author">{{authors}}</span>
-                    <span class="post__metadata post__date-published">{{date published_at timeago="true"}}</span>
-                    <span class="post__metadata post__tags">{{tags}}</span>
-                </div>
-                <p class="post__body">{{excerpt}}</p>
-            </div>
-        </article>
+        <ol class="post-list">
+            {{#foreach posts}}
+                <li class="post">
 
-    {{/foreach}}
+                    <time class="post__metadata post__date-published">{{date published_at}}</time>
+
+                    <h3 class="post__title"><a href="{{url}}">{{title}}</a></h3>
+
+                    <div class="post__tags">
+                        <div class="post__tags-list">
+                            {{#foreach tags}}
+                                <a href="{{url}}" title="{{name}}" class="post__tag post__tag--{{slug}}">
+                                    {{name}}
+                                </a>
+                            {{/foreach}}
+                        </div>
+                    </div>
+                </li>
+
+            {{/foreach}}
+        </ol>
+    </section>
+
+    
 
     {{pagination}}
 </section>

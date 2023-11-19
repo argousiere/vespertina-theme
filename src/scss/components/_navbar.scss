@@ -1,0 +1,37 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #011119;
+    border: 1px solid #004460;
+    color: #CEF6FF;
+    padding: 0 24px;
+
+    .nav {
+        display: flex;
+        align-items: center;
+        height: 48px;
+
+        li {
+            min-width: 150px;
+            text-align: center;
+            list-style: none;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-family: 'Exo', sans-serif;
+            font-size: 13px;
+            color: #CEF6FF;
+        }
+
+        a {
+            color: #CEF6FF;
+            text-decoration: none;
+        }
+    }
+}
+
+.navbar__brand {
+    font-family: 'Exo', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+}
