@@ -1,19 +1,17 @@
-{{!-- Put this into default.hbs --}}
 {{!< default}}
 
-{{#post}}
+<main class="site-main">
 
-<header class="grid">
-    <h1>{{title}}</h1>
-</header>
+    {{#post}}
+        {{> "content" width="wide"}}
+    {{/post}}
 
-<article class="{{post_class}}">
-    {{content}}
-</article>
+    {{#if @custom.show_related_posts}}
+        {{> "related-posts"}}
+    {{/if}}
 
-{{/post}}
+    {{#post}}
+        {{> "comments"}}
+    {{/post}}
 
-
-{{#contentFor 'scripts'}}
-    <script src="{{asset 'built/post.js'}}" defer></script>
-{{/contentFor}}
+</main>

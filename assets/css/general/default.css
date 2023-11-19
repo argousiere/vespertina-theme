@@ -6,12 +6,9 @@ body {
     0.8392857142857143rem + 0.4464285714285714vw,
     1.375rem
   );
-  line-height: 1.6;
   font-family: var(--font-secondary);
+  line-height: 1.6;
   background: var(--body-bg-color);
-}
-
-body {
   position: relative;
   color: var(--body-text-color);
   background-image: 
@@ -62,4 +59,46 @@ body::after {
     calc(var(--grid-size) * 2) calc(var(--grid-size) * 2);
   background-position: 
     var(--dot-grid-offset) var(--dot-grid-offset)
+}
+
+
+/* Ghost default overrides */
+.site {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 48px;
+}
+
+.gh-foot {
+  border-top: 1px solid var(--divider-color);
+  padding: 8px;
+  margin-top: 64px;
+}
+
+hr {
+  background-color: var(--divider-color);
+}
+
+:root {
+  --color-secondary-text: #edf8fe;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.3;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--body-text-color);
+}
+
+a {
+  color: var(--body-text-color);
 }

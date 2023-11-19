@@ -1,31 +1,15 @@
-{{!-- Put this into default.hbs --}}
 {{!< default}}
-<section class="grid">
-    <header>
-        <h1>{{@site.title}}</h1>
-        <p>{{@site.description}}</p>
-    </header>
 
-    {{#foreach posts}}
+<main class="site-main">
 
-        <article>
-            {{#if feature_image}}
-                <div>
-                    <img src="{{img_url feature_image size="m"}}" alt=""> 
-                </div>
-            {{/if}}
-            <div>
-                <h2><a href="{{url}}">{{title}}</a></h2>
-                <div class="post__information">
-                    <span class="post__metadata post__author">{{authors}}</span>
-                    <span class="post__metadata post__date-published">{{date published_at timeago="true"}}</span>
-                    <span class="post__metadata post__tags">{{tags}}</span>
-                </div>
-                <p class="post__body">{{excerpt}}</p>
-            </div>
-        </article>
+    <section class="post-feed gh-feed gh-canvas">
+        <h2 class="post-feed-title">Recent posts</h2>
 
-    {{/foreach}}
+        {{#foreach posts}}
+            {{> "loop"}}
+        {{/foreach}}
+    </section>
 
     {{pagination}}
-</section>
+
+</main>

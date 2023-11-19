@@ -1,0 +1,16 @@
+.navigation-previous .navigation-icon {
+    margin-right: 2rem;
+}
+
+.navigation-next .navigation-link {
+    justify-content: flex-end;
+}
+
+.navigation-next .navigation-icon {
+    margin-left: 2rem;
+}
+
+.navigation-link {
+    display: flex;
+    align-items: center;
+}
