@@ -1,0 +1,29 @@
+.ves-image-frame,
+.kg-image-card {
+    position: relative;
+    padding: 48px;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 24px;
+        bottom: 24px;
+        left: 24px;
+        right: 24px;
+    }
+
+    &::before {
+        border: 1px solid var(--ves-global-color-kyanite);
+    }
+
+    &::after {
+        --corner-size: 24px;
+        --border-width: 1px;
+        padding: calc(24px + var(--border-width));
+        outline: var(--border-width) solid var(--ves-global-color-cerulean);
+        outline-offset: calc(-1*var(--border-width));
+        -webkit-mask: conic-gradient(at var(--corner-size) var(--corner-size),#0000 75%,#000 0) 0 0/calc(100% - var(--corner-size)) calc(100% - var(--corner-size)), linear-gradient(#000 0 0) content-box;
+    }
+}

@@ -1,0 +1,48 @@
+
+:root {
+    --content-font-size: 16px;
+	--content-letter-spacing: 1px;
+}
+
+.gh-content {
+    line-height: 2;
+}
+
+.gh-content .single-content > * + * {
+	margin-top: 48px;
+}
+  
+.gh-foot {
+	font-family: var(--font-primary);
+	color: var(--ves-global-color-ice);
+    padding: 48px 0;
+	height: 50vh;
+	max-height: 400px;
+	background: linear-gradient(to bottom, transparent, var(--ves-global-color-midnight));
+	white-space: initial;
+}
+
+.gh-foot a {
+	color: inherit;
+	
+	&:hover {
+		color: var(--ves-global-color-cerulean);
+	}
+}
+
+.is-head-dark {
+    --color-darker-gray: var(--ves-global-color-midnight);
+}
+
+.kg-image-card {
+	margin: 0;
+}
+
+.kg-toggle-card {
+	box-shadow: none;
+	border: 1px solid var(--ves-border-color);
+}
+
+.kg-toggle-heading svg {
+	color: var(--ves-border-color);
+}

@@ -1,25 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap');
+
 @import "@tryghost/shared-theme-assets/assets/css/v1/screen.css";
-@import "general/fonts.css";
-@import "general/variables.css";
+@import "abstracts/colors.css";
+@import "abstracts/variables.css";
+@import "base/reset.css";
+@import "base/typography.css";
+@import "components/button.css";
+@import "components/tag.css";
+@import "components/feed.css";
+@import "components/related.css";
+@import "components/navigation.css";
+@import "components/pagination.css";
+@import "components/header.css";
+@import "components/form.css";
+@import "components/icons.css";
+@import "components/image.css";
+
 @import "general/default.css";
-/* @import "general/basics.css"; */
-@import "general/button.css";
-@import "general/form.css";
-@import "general/icons.css";
 @import "site/layout.css";
-@import "site/header.css";
 @import "site/cover.css";
-@import "blog/feed.css";
 @import "blog/featured.css";
-@import "blog/pagination.css";
+/* @import "blog/pagination.css"; */
 @import "blog/single.css";
 @import "blog/author.css";
 @import "blog/share.css";
 @import "blog/navigation.css";
-@import "blog/related.css";
-@import "blog/comment.css";
-@import "blog/tag.css";
+/* @import "blog/comment.css"; */
 @import "misc/owl.css";
 @import "misc/utils.css";
 @import "misc/animations.css";
-@import "misc/dark.css";
+@import "base/ghost.css";
+/* @import "misc/dark.css"; */

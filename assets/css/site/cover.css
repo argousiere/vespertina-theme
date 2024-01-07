@@ -24,6 +24,16 @@
     font-size: 1.7rem;
 }
 
+.cover-image {
+    height: 240px;
+    align-self: stretch;
+}
+
+.cover-image > img {
+    height: inherit;
+    width: 100%;
+}
+
 .cover-cta {
     display: flex;
     margin-top: 2rem;

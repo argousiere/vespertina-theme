@@ -3,28 +3,53 @@
 }
 
 .featured-wrapper .u-placeholder {
-    margin-bottom: 24px;
+    background: center / 40% url(/assets/images/ves-icon-empty-cover.svg) no-repeat;
 }
 
-.featured-wrapper .post-title {
-    margin-bottom: 0;
-    font-size: 1.8rem;
-    font-weight: 700;
-    line-height: 1.3;
-    letter-spacing: -0.01em;
-    word-break: break-word;
-}
+.featured-wrapper {
+    .post,
+    .post-title {
+        transition: border-color, background-color 50ms ease-in-out;
+    }
 
-.has-serif-title .featured-wrapper .post-title {
-    font-family: var(--font-serif);
+    .post {
+        border: 1px solid var(--ves-border-color);
+        border-radius: var(--ves-border-radius);
+        background: radial-gradient(ellipse 50% var(--grid-size) at 50% bottom,var(--post-glow-color),transparent), #01111980;
+        overflow: hidden;
+    
+        &:hover {
+            border-color: var(--ves-global-color-cerulean);
+            
+            .post-title {
+                border-color: var(--ves-global-color-cerulean);
+                background-color: var(--ves-global-color-celestial);
+            }
+        }
+    
+        &:active {
+            .post-title {
+                background-color: var(--ves-global-color-kyanite);
+            }
+        }
+    }
+    
+    .post-title {
+        border-top: 1px solid var(--ves-border-color);
+        margin-bottom: 0;
+        font-size: 16px;
+        line-height: 1.3;
+        word-break: break-word;
+        padding: 8px 16px;
+        height: 72px;
+        font-weight: 800;
+    }
 }
 
 .featured-title {
     padding-bottom: 1rem;
-    margin-bottom: 4.5rem;
     font-size: 1.5rem;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 0.01em;
     border-bottom: 1px solid var(--light-gray-color);
 }

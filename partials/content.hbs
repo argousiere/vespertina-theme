@@ -2,7 +2,7 @@
 
     {{#match @page.show_title_and_feature_image}}
         {{#if feature_image}}
-        <figure class="post-feature-image">
+        <figure class="post-feature-image ves-image-frame">
             <div class="u-placeholder horizontal">
                 <img
                     class="u-object-fit"
@@ -18,89 +18,92 @@
             {{/if}}
         </figure>
         {{/if}}
-
-        <header class="single-header gh-canvas">
-            {{#if feature_image}}
-            {{#unless no_image}}
-                
-            {{/unless}}
-            {{/if}}
-
-            {{#is "post"}}
-            <div class="single-meta">
-                <span class="single-meta-item single-meta-date">
-                    <time datetime="{{date format="YYYY-MM-DD"}}">
-                        {{date published_at format="DD.MMM.YYYY"}}
-                    </time>
-                </span>
-                {{#if reading_time}}
-                    <span class="single-meta-item single-meta-length">
-                        {{reading_time}}
-                    </span>
-                {{/if}}
-            </div>
-            {{/is}}
-
-            <h1 class="single-title">{{title}}</h1>
-
-            {{#if custom_excerpt}}
-                <div class="single-excerpt">
-                    {{custom_excerpt}}
-                </div>
-            {{/if}}
-        </header>
     {{/match}}
 
-    <div class="single-content gh-content gh-canvas">
-        {{content}}
-    </div>
+    <div class="single-body">
+        {{#match @page.show_title_and_feature_image}}
+        {{#if title}}
+            <header class="single-header gh-content gh-canvas">
+                {{#if feature_image}}
+                {{#unless no_image}}
+                    
+                {{/unless}}
+                {{/if}}
 
+                {{#is "post"}}
+                <div class="single-meta">
+                    <span class="single-meta-item single-meta-date">
+                        <time datetime="{{date format="YYYY-MM-DD"}}">
+                            {{date published_at format="DD.MMM.YYYY"}}
+                        </time>
+                    </span>
+                    {{#if reading_time}}
+                        <span class="single-meta-item single-meta-length">
+                            {{reading_time}}
+                        </span>
+                    {{/if}}
+                </div>
+                {{/is}}
 
-    {{#if tags}}
-    <div class="gh-canvas">
-        <section class="single-meta-box">
-            <h6 class="single-meta-box-title">Filed under:</h6>
-            <div class="single-meta-tags">
-            {{#foreach tags}}
-                <span class="single-meta-item single-meta-tag">
-                    <a class="post-tag post-tag-{{slug}}" href="{{url}}">
-                        {{name}}
-                    </a>
-                </span>
-            {{/foreach}}
+                <h1 class="single-title">{{title}}</h1>
+
+                {{#if custom_excerpt}}
+                    <div class="single-excerpt">
+                        {{custom_excerpt}}
+                    </div>
+                {{/if}}
+            </header>
+        {{/if}}
+        {{/match}}
+
+        <div class="single-content gh-content gh-canvas">
+            {{content}}
+        </div>
+
+        {{#if tags}}
+        <section class="single-meta-box gh-content gh-canvas">
+            <div class="tag-box">
+                <h6 class="single-meta-box-title">Filed under</h6>
+                <div class="single-meta-tags">
+                {{#foreach tags}}
+                    <span class="single-meta-item single-meta-tag">
+                        <a class="post-tag post-tag-{{slug}}" href="{{url}}">
+                            {{name}}
+                        </a>
+                    </span>
+                {{/foreach}}
+                </div>
             </div>
         </section>
+        {{/if}}
+
+        {{#is "post"}}
+        <footer class="single-footer">
+            <div class="single-footer-left">
+            {{#prev_post}}
+                <a class="navigation-link navigation-previous" href="{{url}}" aria-label="Previous post">
+                    {{> "icons/arrow-left"}}
+                    <div class="single-previous-post">
+                        <span class="single-previous-post-heading">Older Post</span>
+                        <span class="single-previous-post-title">{{ title }}</span>
+                    </div>
+                </a>
+            {{/prev_post}}
+            </div>
+
+            <div class="single-footer-right">
+            {{#next_post}}
+                <a class="navigation-link navigation-next" href="{{url}}" aria-label="Next post">
+                    <div class="single-next-post">
+                        <span class="single-next-post-heading">Newer Post</span>
+                        <span class="single-next-post-title">{{ title }}</span>
+                    </div>
+                {{> "icons/arrow-right"}}
+                </a>
+            {{/next_post}}
+            </div>
+
+        </footer>
+        {{/is}}
     </div>
-    {{/if}}
-
-    {{#is "post"}}
-    <footer class="single-footer">
-
-        <div class="single-footer-left">
-        {{#prev_post}}
-            <a class="navigation-link navigation-previous" href="{{url}}" aria-label="Previous post">
-                {{> "icons/arrow-left"}}
-                <div class="single-previous-post">
-                    <span class="single-previous-post-heading">Newer Post</span>
-                    <span class="single-previous-post-title">{{ title }}</span>
-                </div>
-            </a>
-        {{/prev_post}}
-        </div>
-
-        <div class="single-footer-right">
-        {{#next_post}}
-            <a class="navigation-link navigation-next" href="{{url}}" aria-label="Next post">
-                <div class="single-next-post">
-                    <span class="single-previous-post-heading">Older Post</span>
-                    <span class="single-next-post-title">{{ title }}</span>
-                </div>
-            {{> "icons/arrow-right"}}
-            </a>
-        {{/next_post}}
-        </div>
-
-    </footer>
-    {{/is}}
-
 </article>

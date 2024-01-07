@@ -1,6 +1,6 @@
 {
-    "name": "dawn",
-    "description": "A Ghost theme",
+    "name": "vespertina-theme",
+    "description": "A Ghost theme based on Dawn",
     "version": "1.0.0",
     "private": true,
     "engines": {
@@ -8,16 +8,16 @@
     },
     "license": "MIT",
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "Jeanella Klarys Pascual",
+        "email": "dev@jeekapascual.com",
+        "url": "https://jeekapascual.com"
     },
     "keywords": [
         "ghost",
         "theme",
         "ghost-theme"
     ],
-    "docs": "https://dawn.ghost.io/about/",
+    "docs": "https://github.com/argousiere/vespertina-theme",
     "config": {
         "posts_per_page": 5,
         "image_sizes": {

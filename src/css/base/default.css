@@ -9,6 +9,7 @@ body {
   line-height: 1.6;
   font-family: var(--font-secondary);
   background: var(--body-bg-color);
+  letter-spacing: 1px;
 }
 
 body {
