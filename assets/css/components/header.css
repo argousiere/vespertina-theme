@@ -1,7 +1,8 @@
 .gh-head {
-    background: #011119;
-    border: 1px solid #004460;
+    background: var(--ves-global-color-midnight);
+    border: 1px solid var(--ves-border-color);
     height: 48px;
+    border-radius: 6px;
 }
 
 .gh-head-logo {
@@ -36,7 +37,6 @@
     flex: 1 0 auto;
     display: flex;
     align-items: center;
-    padding: 0 36px;
     position: relative;
 }
 
@@ -48,13 +48,15 @@
     height: 100%;
 }
 
-.gh-head .nav-current {
+.gh-head .nav-current,
+.gh-head .nav li:hover {
     background: #004460;
+}
+
+.gh-head .nav-current {
     border-width: 1px 0;
     border-style: solid;
     border-color: #00aaf0;
-    margin-top: -1px;
-    margin-bottom: -1px;
 }
 
 .gh-head .nav-current::before {
@@ -65,7 +67,16 @@
     width: 24px;
     display: inline-block;
     position: absolute;
-    left: 16px;
+    left: 8px;
+}
+
+.gh-head li a {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    width: 100%;
+    padding-left: 36px;
+    padding-right: 24px;
 }
 
 .gh-dropdown {

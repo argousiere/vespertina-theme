@@ -1,0 +1,151 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    padding: 0 15px;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    background-color: #011119;
+    border: 1px solid var(--ves-border-color);
+    border-radius: 3px;
+    outline: none;
+}
+
+.button:hover {
+    background-color: var(--ves-border-color);
+    border-color: var(--ves-border-color);
+    opacity: 1;
+}
+
+.button .icon-loading {
+    display: none;
+}
+
+.button.loading {
+    text-indent: -9999px;
+}
+
+.button.loading .icon-loading {
+    display: block;
+}
+
+.button-secondary {
+    color: var(--darker-gray-color);
+}
+
+.button-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    color: var(--darker-gray-color);
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+}
+
+.button-icon:hover .icon {
+    opacity: 0.8;
+}
+
+.button-text {
+    padding: 0;
+    margin: 0;
+    line-height: inherit;
+    color: var(--darker-gray-color);
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+}
+
+:root {
+    --ves-btn-focus-corner-size: 12px;
+    --ves-btn-focus-offset: -10px;
+    --ves-btn-focus-border-color: var(--ves-global-color-kyanite);
+    --ves-btn-focus-corner-color: var(--ves-global-color-cerulean);
+    --ves-btn-focus-bg-color: var(--ves-global-color-celestial);
+    --ves-btn-active-bg-color: var(--ves-global-color-kyanite);
+  }
+  
+  .ves-btn {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 11px;
+    font-weight: 800;
+    border: 1px solid var(--ves-border-color);
+    background: var(--ves-global-color-midnight);
+    color: var(--ves-global-color-light);
+    padding: 0 16px;
+    text-transform: uppercase;
+    height: 36px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    line-height: 1;
+    transition: background-color, border-color 100ms linear;
+    letter-spacing: 2px;
+  }
+  
+  .ves-btn::before,
+  .ves-btn::after {
+    position: absolute;
+    content: "";
+    top: var(--ves-btn-focus-offset);
+    left: var(--ves-btn-focus-offset);
+    right: var(--ves-btn-focus-offset);
+    bottom: var(--ves-btn-focus-offset);
+    z-index: -1;
+    border: 1px solid transparent;
+    transition: all 90ms linear;
+    opacity: 0;
+  }
+  
+  .ves-btn::before {
+    border-color: var(--ves-btn-focus-border-color);
+  }
+  
+  .ves-btn::after {
+    opacity: 0;
+    --b: 1px; /* border width */
+      --c: var(--ves-btn-focus-corner-size); /* corner size */
+    inset: calc(-1*var(--b));
+    background: var(--ves-btn-focus-corner-color) border-box;
+    --corner: 
+      conic-gradient(from -90deg at var(--c) var(--c), red 25%, #0000 0) 
+        0 0/ calc(100% - var(--c))  calc(100% - var(--c)) border-box;
+    --inner: conic-gradient(red 0 0) padding-box;
+    -webkit-mask: var(--corner), var(--inner);
+    -webkit-mask-composite: source-out;
+    mask: var(--corner) subtract, var(--inner);
+    top: var(--ves-btn-focus-offset);
+    left: var(--ves-btn-focus-offset);
+    right: var(--ves-btn-focus-offset);
+    bottom: var(--ves-btn-focus-offset);
+    border-color: var(--ves-btn-focus-corner-color);
+  }
+  
+  .ves-btn:hover {
+    background: var(--ves-btn-focus-bg-color);
+    border-color: var(--ves-btn-focus-bg-color);
+  }
+  
+  .ves-btn:active {
+    background-color: var(--ves-btn-active-bg-color);
+    border-color: var(--ves-btn-active-bg-color);
+  }
+  
+  .ves-btn:hover::before,
+  .ves-btn:focus::before,
+  .ves-btn:hover::after,
+  .ves-btn:focus::after {
+    opacity: 1;
+  }

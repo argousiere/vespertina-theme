@@ -1,0 +1,63 @@
+
+:root {
+    --content-font-size: 16px;
+	--content-letter-spacing: 1px;
+}
+
+.gh-content {
+    line-height: 2;
+}
+
+.gh-content > * + * {
+	margin-top: 0;
+}
+
+.site {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem;
+}
+  
+.gh-foot {
+    border-top: 1px solid var(--ves-border-color);
+    padding: 8px;
+    margin-top: 64px;
+}
+
+.gh-content a {
+    color: var(--ves-global-color-aurora);
+}
+
+.is-head-dark {
+    --color-darker-gray: var(--ves-global-color-midnight);
+}
+
+.kg-image-card {
+    --b: 1px; /* border width */
+	--c: 24px; /* corner size */
+	position: relative;
+	margin: 1em auto;
+	border: solid var(--b) var(--ves-global-color-kyanite);
+	padding: var(--c);
+	
+	&::before {
+		--corner: conic-gradient(from -90deg at var(--c) var(--c),red 25%,#0000 0) 0 0/calc(100% - var(--c)) calc(100% - var(--c)) border-box;
+		--inner: conic-gradient(red 0 0) padding-box;
+		background: var(--ves-global-color-cerulean) border-box;
+		border: inherit;
+		content: "";
+		inset: calc(var(--b)*-1);
+		-webkit-mask: var(--corner),var(--inner);
+		-webkit-mask-composite: source-out;
+		mask: var(--corner) subtract,var(--inner);
+		position: absolute;
+		z-index: -1;
+	}
+}
+
+@media (max-width: 480px) {
+    .site {
+        padding: 2rem;
+    }
+}

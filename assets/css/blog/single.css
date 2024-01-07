@@ -1,28 +1,35 @@
 :root {
     --post-bg: linear-gradient(to bottom, rgba(0, 48, 69, 0.8), rgba(4, 29, 42, 0.8));
+    --ves-border-color: var(--ves-global-color-celestial);
+    --post-glow-color: #00304380;
 }
 
 .post-feature-image {
     margin-top: 0;
-    border-bottom: 1px solid var(--divider-color);
-    margin-bottom: 24px;
+    border-bottom: 1px solid var(--ves-border-color);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    overflow: hidden;
+}
+
+.single-body {
+    background: radial-gradient(ellipse 50% 25% at 50% top,var(--post-glow-color),transparent);
 }
 
 .single-header {
     margin-bottom: 0;
+    padding-top: 48px;
+    margin-top: 0;
 }
 
 .single.post {
-    background: rgb(1 30 48 / 50%);
-    border: 1px solid var(--divider-color);
-    max-width: 800px;
+    background: 
+        radial-gradient(ellipse 50% 25% at 50% bottom,var(--post-glow-color),transparent), #01111980;
+    border: 1px solid var(--ves-border-color);
+    backdrop-filter: blur(0);
     margin-left: auto;
     margin-right: auto;
-    backdrop-filter: blur(6px);
-}
-
-.single.post.no-image .single-header {
-    margin-top: 48px;
+    border-radius: 6px;
 }
 
 .single-header {
@@ -30,6 +37,9 @@
 }
 
 .single-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
     margin-bottom: 1rem;
     font-size: 1.2rem;
     font-weight: 800;
@@ -58,6 +68,7 @@
 
 .single-meta-tag .post-tag {
     color: var(--brand-color);
+    text-decoration: none;
 }
 
 .single-title {
@@ -72,8 +83,11 @@
 }
 
 .single-excerpt {
-    margin-top: 2rem;
-    font-size: 1.8rem;
+    border-bottom: 1px solid var(--ves-border-color);
+    margin-top: 3rem;
+    font-size: 1.25rem;
+    padding-bottom: 2rem;
+    font-style: italic;
     word-break: break-word;
 }
 
@@ -92,7 +106,7 @@
 .single-content h2,
 .single-content h3,
 .single-content h4 {
-    color: #7bd4f8;
+    text-transform: none;
 }
 
 .single-cta {
@@ -122,7 +136,7 @@
     display: flex;
     align-items: center;
     margin-top: 4.5rem;
-    border-top: 1px solid var(--divider-color);
+    border-top: 1px solid var(--ves-border-color);
 }
 
 .single-footer  .navigation-icon {
@@ -198,6 +212,14 @@
     font-weight: bold;
     margin-bottom: 1rem;
     font-size: 12px;
+}
+
+@media (max-width: 480px) {
+    .single-footer-left,
+    .single-footer-middle,
+    .single-footer-right {
+        padding: 1rem;
+    }
 }
 
 @media (max-width: 767px) {

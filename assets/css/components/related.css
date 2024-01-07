@@ -1,6 +1,6 @@
 .related-wrapper {
     background: rgb(2 21 32 / 50%);
-    border: 1px solid var(--divider-color);
+    border: 1px solid var(--ves-border-color);
     padding: 24px 0;
     max-width: 800px;
     margin-left: auto;
